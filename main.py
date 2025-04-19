@@ -31,7 +31,3 @@ async def check_ngrok(url: str = None):
     except requests.RequestException as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-# لتشغيل التطبيق
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=5000)
